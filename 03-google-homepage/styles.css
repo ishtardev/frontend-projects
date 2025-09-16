@@ -42,3 +42,12 @@ button:first-of-type {
 button::hover {
     cursor: pointer;   
 }
+
+p {
+    margin-top: 40px;
+    text-align: center;
+}
+
+a {
+
+}
