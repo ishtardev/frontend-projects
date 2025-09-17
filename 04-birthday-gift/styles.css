@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(pink,rgb(242, 44, 77));
+    min-height: 100vh;
+    color: rgb(221, 13, 48);
+    text-align: center;
+    text-shadow: 5px 5px 10px rgb(232, 113, 113);
+}
+
+.gift-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.gift-img {
+    background-image: url(images/gift-closed.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 90vw;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.gift-img:hover {
+    background-image: url(images/gift-opened.png);
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
