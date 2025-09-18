@@ -4,12 +4,16 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter!</title>
+    <title>Passenger Counter!</title>
 </head>
 <body>
-    <h1>Count Count Count</h1>
-    <p>0</p>
-    <button id="addbtn">Increment</button>
-    <button id="resetbtn">Save</button>
+    <h1>Passenger Counter</h1>
+    <h2>People Entered:</h2>
+    <h3 id="peopleEntered"></h3>
+    <button id="addbtn" onclick="increment()">Increment</button>
+    <button id="resetbtn" onclick="save()">Save</button>
+    <h2>Previous Entries:</h2>
+    <h3 id="previousEntries"></h3>
+    <script src="index.js"></script>
 </body>
 </html>
