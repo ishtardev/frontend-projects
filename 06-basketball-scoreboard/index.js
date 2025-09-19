@@ -21,15 +21,15 @@ function add3() {
 
 function guestadd1() {
     countguest += 1
-    guest.textContent = count
+    guest.textContent = countguest
 }
 
 function guestadd2() {
     countguest += 2
-    guest.textContent = count
+    guest.textContent = countguest
 }
 
 function guestadd3() {
     countguest += 3
-    guest.textContent = count
+    guest.textContent = countguest
 }
