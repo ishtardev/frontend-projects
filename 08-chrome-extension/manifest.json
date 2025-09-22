@@ -4,5 +4,8 @@
     "name": "Tabs Saver",
     "action": {
         "default_popup": "index.html"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }

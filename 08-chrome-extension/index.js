@@ -1,4 +1,4 @@
-let tabs = []
+let tabsArray = []
 
 let inputEl = document.getElementById("input-el")
 let saveinput = document.getElementById("save")
@@ -7,32 +7,41 @@ let deleteBtn = document.getElementById("delete")
 
 let ulEl = document.getElementById("ul-el")
 
-deleteBtn.addEventListener("click", function() {
-    localStorage.clear()
-    tabs = []
-    render(tabs)
+saveTab.addEventListener("click", function(tabs) {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        tabsArray.push(tabs[0].url)
+        localStorage.setItem("tabsArray", JSON.stringify(tabsArray))
+        render(tabsArray)
+    })
 })
 
-let tabsFromLocalStorage = JSON.parse(localStorage.getItem("tabs"))
+deleteBtn.addEventListener("click", function() {
+    localStorage.clear()
+    tabsArray = []
+    render(tabsArray)
+})
 
-if (tabsFromLocalStorage ){
-    tabs = tabsFromLocalStorage 
-    render(tabs)
+let tabsArrayFromLocalStorage = JSON.parse(localStorage.getItem("tabsArray"))
+
+if (tabsArrayFromLocalStorage ){
+    tabsArray = tabsArrayFromLocalStorage 
+    render(tabsArray)
 }
 
 saveinput.addEventListener("click", function(){
-    tabs.push(inputEl.value)
-    render(tabs)
+    tabsArray.push(inputEl.value)
+    inputEl.value = ""
+    render(tabsArray)
 
-    localStorage.setItem("tabs",JSON.stringify(tabs))
+    localStorage.setItem("tabsArray",JSON.stringify(tabsArray))
 
-    console.log(localStorage.getItem("tab"))
+    console.log(localStorage.getItem("tabsArray"))
 })
 
 function render(arr) {
     let itms = ""
     for (let i = 0; i < arr.length; i++){
-        itms += "<li><a href='#'>"+arr[i]+"</a></li>"
+        itms += `<li><a target="_blank" href='${arr[i]}'>${arr[i]}</a></li>`
     }
     ulEl.innerHTML = itms
 }
