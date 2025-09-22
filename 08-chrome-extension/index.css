@@ -19,6 +19,18 @@ button {
     color: #e2cbff;
     font-weight: 600;
     margin-right: 9px;
+    border: 1px solid #6a3093;
+    cursor: pointer;
+}
+
+#delete {
+    background-color: #e2cbff;
+    color: #6a3093;
+    
+}
+
+button:active {
+    transform: translateY(1px)
 }
 
 a {
