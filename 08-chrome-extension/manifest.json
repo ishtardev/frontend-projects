@@ -3,7 +3,8 @@
     "version": "1.0",
     "name": "Tabs Saver",
     "action": {
-        "default_popup": "index.html"
+        "default_popup": "index.html",
+        "default_icon" : "logo.png"
     },
     "permissions": [
         "tabs"
