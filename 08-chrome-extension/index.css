@@ -5,6 +5,15 @@ body {
     width: 400px;
     min-width: 300px;
 }
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #ddc6fa;
+    font-weight: 50;
+    margin-top: 0;
+}
 
 input {
     border: 1px #05407b solid;
